@@ -21,7 +21,12 @@ class Ellipse(QMainWindow, Ui_MainWindow):
             qp = QPainter()
             # Начинаем процесс рисования
             qp.begin(self)
-            qp.setBrush(QColor(255, 255, 0))
+            rr = random.randint(0, 255)
+            g = random.randint(0, 255)
+            b = random.randint(0, 255)
+
+            qp.setBrush(QColor(rr, g, b))
+
             r = random.randint(20, 100)
             x, y = random.randint(0, 800), random.randint(0, 600)
             qp.drawEllipse(int(x - r / 2), int(y - r / 2), r, r)
